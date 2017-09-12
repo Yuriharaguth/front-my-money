@@ -9,7 +9,7 @@ import ValueBox from '../common/widget/valueBox'
 import Row from '../common/layout/row'
 
 class DashBoard extends Component {
-
+    //chama metodo toda vez que ele for ser renderizado
     componentWillMount() {
         this.props.getSumary()
     }
@@ -35,5 +35,8 @@ class DashBoard extends Component {
 }
 
 const mapStateToPros = state => ({summary: state.dashBoard.summary})
+
+//ligando a função(actionCreater) com o componente
 const mapDispatchToProps = dispatch => bindActionCreators({getSumary}, dispatch)
+
 export default connect(mapStateToPros, mapDispatchToProps)(DashBoard)
