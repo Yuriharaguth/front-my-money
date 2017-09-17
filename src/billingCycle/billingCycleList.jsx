@@ -10,6 +10,19 @@ class BillingCycleList extends Component {
  
     }
 
+    renderRows() {
+        const list = this.props.list || []
+        //map percorrer os elementos e retornar um array de mesmo tamanho
+        //(modificado da forma que vc implementa)
+        return list.map(bc => (
+            <tr key={bc._id}>
+                <td>{bc.name}</td>
+                <td>{bc.month}</td>
+                <td>{bc.year}</td>
+            </tr>
+        ))
+    }
+
     render() {
         console.log(this.props.list)
         return (
@@ -21,10 +34,10 @@ class BillingCycleList extends Component {
                             <th>Mês</th>
                             <th>Ano</th>
                         </tr>
-                        <tbody>
-
-                        </tbody>
                     </thead>
+                    <tbody>
+                            {this.renderRows()}
+                    </tbody>
                 </table>
             </div>
         )
