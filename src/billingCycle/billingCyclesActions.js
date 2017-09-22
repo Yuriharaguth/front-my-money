@@ -29,6 +29,11 @@ export function create(values) {
                 e.response.data.errors.forEach(error => toastr.error('Erro', error))
             })
     }
+}
 
-   
+export function showUpdate(billingCycles) {
+    return [
+        showTabs('tabUpdate'),
+        selectTab('tabUpdate')
+    ]
 }
