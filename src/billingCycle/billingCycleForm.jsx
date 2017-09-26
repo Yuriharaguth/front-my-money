@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { reduxForm, Field } from 'redux-form'
 
-import { init } from './billingCyclesAction'
+import { init } from './billingCyclesActions'
 import labelAndInput from '../common/form/labelAndInput'
 
 
