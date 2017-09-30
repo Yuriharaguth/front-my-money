@@ -6,4 +6,5 @@ export default props => (
         placeholder={props.placeholder}
         readOnly={props.readOnly}
         type={props.type} />
+        //teste
 )
