@@ -60,6 +60,7 @@ class BillinCycle extends Component {
     }
 }
 
+
 const mapDispatchToProps = dispatch =>
     bindActionCreators({init, create, update, remove}, dispatch)
 export default connect(null, mapDispatchToProps)(BillinCycle)

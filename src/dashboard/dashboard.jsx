@@ -34,9 +34,12 @@ class DashBoard extends Component {
     }
 }
 
+//estamos retirando o sumary do state da aplicação
 const mapStateToPros = state => ({summary: state.dashBoard.summary})
 
 //ligando a função(actionCreater) com o componente
+// faz a ligação de todas as actionsCreator com o dispatch que se encarrega de 
+    // dispara aa ações para o reducer
 const mapDispatchToProps = dispatch => bindActionCreators({getSumary}, dispatch)
 
 export default connect(mapStateToPros, mapDispatchToProps)(DashBoard)
