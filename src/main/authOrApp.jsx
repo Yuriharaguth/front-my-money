@@ -11,6 +11,7 @@ import { validateToken } from '../auth/authActions'
 class AuthOrApp extends Component {
 
     componentWillMount() {
+        console.log('dadasdas')
         if(this.props.auth.user) {
             this.props.validateToken(this.props.auth.user.token)
         }
